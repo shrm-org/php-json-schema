@@ -1,3 +1,6 @@
+    
+    This Fork supports full iso-8601 for format date-time
+
 This library provides JSON schema validation using the schema found at http://json-schema.org. 
 Note that it is not yet feature complete, but does support basic validation. The JSON schema
 draft can be found at http://tools.ietf.org/html/draft-zyp-json-schema-03
