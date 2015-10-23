@@ -1,14 +1,22 @@
 {
-    "name": "hasbridge/json-schema-validator",
+    "name": "shrm-org/json-schema-validator",
     "type": "library",
     "description": "PHP 5.3 implementation of json schema validation",
-    "homepage": "https://github.com/hasbridge/php-json-schema",
+    "homepage": "https://github.com/shrm-org/php-json-schema",
     "type": "library",
     "keywords": ["json", "schema"],
     "license": "MIT",
     "authors": [{
         "name": "Harold Asbridge",
         "email": "hasbridge@gmail.com"
+    },
+    {
+        "name": "Christian Ranz",
+        "email": "cr@codastic.com"
+    },
+    {
+        "name": "Brian Moelk",
+        "email": "bmoelk@shrm.org"
     }],
     "require": {
         "php": ">=5.3.2"
