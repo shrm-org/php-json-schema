@@ -2,7 +2,9 @@
 ## Fork Info
 
 * https://github.com/ranzwertig/php-json-schema fork adds support full iso-8601 for format date-time
-* https://github.com/shrm-org/php-json-schema fork fixes [json-schema patterns do NOT have delimiters](https://github.com/hasbridge/php-json-schema/pull/5)
+* https://github.com/shrm-org/php-json-schema fork:
+  1. fixes [json-schema patterns do NOT have delimiters](https://github.com/hasbridge/php-json-schema/pull/5)
+  2. adds support for required array at object level
 
 ---
 
