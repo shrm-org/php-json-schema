@@ -173,6 +173,29 @@ class Validator
         return $this;
     }
 
+
+    /**
+     * Validate entity required
+     *
+     * @param mixed $entity
+     * @param object $schema
+     * @param string $entityName
+     *
+     * @return Validator
+     */
+    protected function validateRequired($entity, $schema, $entityName)
+    {
+        if (isset($schema->required)) {
+            foreach((array)$schema->required as $requiredProp) {
+                if (!isset($entity->{$requiredProp})) {
+                    throw new ValidationException(sprintf('Missing required property [%s] for [%s]', $requiredProp, $entityName));
+                };
+            }
+        };
+        return $this;
+    }
+
+
     /**
      * Validate entity type
      *
@@ -272,6 +295,7 @@ class Validator
     protected function checkTypeObject($entity, $schema, $entityName)
     {
         $this->validateProperties($entity, $schema, $entityName);
+        $this->validateRequired($entity, $schema, $entityName);
 
         return $this;
     }

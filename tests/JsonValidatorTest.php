@@ -115,6 +115,18 @@ class JsonValidatorTest extends PHPUnit_Framework_TestCase
     /**
      * @expectedException Json\ValidationException
      */
+    public function testMissingRequiredObject()
+    {
+        $v = $this->getValidator('required-object.json');
+        $o = (object)array(
+            'baz' => 'bar'
+        );
+        $v->validate($o);
+    }
+
+    /**
+     * @expectedException Json\ValidationException
+     */
     public function testInvalidAdditionalProperties()
     {
         $v = $this->getValidator('additionalProperties.json');
